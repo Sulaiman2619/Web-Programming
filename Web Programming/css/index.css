@@ -1,0 +1,189 @@
+
+body {
+    background-image: url("/img/img1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    position: absolute;
+    box-sizing: border-box;
+}
+
+.da-student {
+    max-width: 100%;
+    position: relative;
+    margin-left: -18%;
+
+}
+
+.da-text {
+    font-size: 70px;
+    font-weight: bold;
+    color: rgb(254, 223, 45);
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+.student-text {
+    position: absolute;
+    top: 53%;
+    left: 40%;
+    transform: translate(-80%,-50%);
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+}
+.menu {
+    position: relative;
+    text-align: center;
+    transform: translate(30%, 0%);
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(20px);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-bottom: 7%;
+    
+}
+ul li {
+    list-style: none;
+    display: inline-block;
+    font-size: 50px;
+    padding: 30px;
+
+}
+ul a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+ul a:hover{
+    color: #fedf2d;
+}
+
+.social-menu {
+    position: relative;
+    top: 100%;
+    left: 70%;
+    transform: translate(20%,-50%);
+}
+
+@media  screen and (min-width: 1200px) {
+    .da-student {
+        left: 20%;
+    }
+
+    .da-text {
+        font-size: 80px;
+    }
+
+    .student-text {
+        left: 40%;
+        font-size: 60px;
+    }
+
+    .menu {
+        left: 25%;
+    }
+
+    .social-menu {
+        margin-top: 70px;
+        left: 93%;
+    }
+}
+
+@media  screen and (min-width: 992px) {
+    .da-student {
+        max-width: max-content;
+        left: 20%;
+    }
+
+    .da-text {
+        font-size: 70px;
+    }
+    .student-text {
+        top: 52%;
+        left: 290%;
+        font-size: 50px;
+    }
+    .menu {
+        left: -30%;
+    }
+    .menu  li {
+        font-size: 50px;
+        
+    }
+    .social-menu {
+        margin-top: 50px;
+        left: -22%;
+        text-align: center;
+    }
+    .social-menu li {s
+        font-size: 40px;
+    }
+}
+
+
+
+@media  screen and (max-width: 768px) {
+    
+    .da-student {
+        max-width: max-content;
+        left: 20%;
+    }
+
+    .da-text {
+        font-size: 70px;
+    }
+    .student-text {
+        top: 52%;
+        left: 290%;
+        font-size: 50px;
+    }
+    .menu {
+        left: -30%;
+    }
+    .menu  li {
+        font-size: 45px;
+        
+    }
+    .social-menu {
+        margin-top: 50px;
+        left: -22%;
+        text-align: center;
+    }
+    .social-menu li {s
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .da-student {
+        max-width: max-content;
+        left: 20%;
+    }
+
+    .da-text {
+        font-size: 50px;
+    }
+    .student-text {
+        top: 49%;
+        left: 320%;
+        font-size: 40px;
+    }
+    .menu {
+        left: -30%;
+    }
+    .menu  li {
+        font-size: 35px;
+    }
+    .social-menu {
+        margin-top: 70px;
+        left: -20%;
+    }
+    .social-menu li {
+        font-size: 40px;
+    }
+}
+
+
+
