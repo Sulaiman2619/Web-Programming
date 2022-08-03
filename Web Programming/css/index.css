@@ -12,8 +12,8 @@ body {
 .da-student {
     max-width: 100%;
     position: relative;
-    margin-left: -18%;
-    margin-top: -10%;
+    margin-left: 3%;
+    margin-top: -7%;
 
 }
 
@@ -27,9 +27,9 @@ body {
 .student-text {
     position: absolute;
     top: 53%;
-    left: 40%;
+    left: 50%;
     transform: translate(-80%,-50%);
-    font-size: 40px;
+    font-size: 55px;
     font-weight: bold;
     color: white;
 }
@@ -37,17 +37,19 @@ body {
     width: 120%;
     position: relative;
     text-align: center;
-    transform: translate(70%, 0%);
+    transform: translate(50%, 0%);
     background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(20px);
-    padding : 10% 5%;
+    padding : 0% 5%;
+    padding-bottom: 10%;
     
 }
-ul li {
+.menu li {
     list-style: none;
     display: inline-block;
     font-size: 50px;
     padding: 30px;
+    padding-top: 10%;
 
 }
 ul a {
@@ -61,8 +63,159 @@ ul a:hover{
 }
 
 .social-menu {
+    margin-top: 7%;
     position: relative;
-    transform: translate(90%,-20%);
+    transform: translate(95%,-20%);
+}
+
+.social-menu li {
+    list-style: none;
+    display: inline-block;
+    font-size: 50px;
+    padding: 30px;
+}
+
+
+
+
+@media only screen and (max-width: 1200px) {
+    
+    .da-student {
+        max-width: max-content;
+        left: 0%;
+        margin-top: -5%;
+    }
+
+    .da-text {
+        font-size: 65px;
+    }
+    .student-text {
+        top: 55%;
+        left: 310%;
+        font-size: 50px;
+    }
+    .menu {
+        width: 120%;
+        left: -35%;
+        padding: 5% 0%;
+    }
+    .menu  li {
+        font-size: 50px;
+        padding-top: 10%;
+        
+    }
+    .social-menu {
+        margin-top: 50px;
+        left: -60%;
+        text-align: center;
+    }
+    .social-menu li {
+        font-size: 45px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    
+    .da-student {
+        max-width: max-content;
+        left: 0%;
+        margin-top: -5%;
+    }
+
+    .da-text {
+        font-size: 65px;
+    }
+    .student-text {
+        top: 55%;
+        left: 310%;
+        font-size: 50px;
+    }
+    .menu {
+        width: 120%;
+        left: -50%;
+        padding: 5% 0%;
+    }
+    .menu  li {
+        font-size: 50px;
+        padding-top: 10%;
+        
+    }
+    .social-menu {
+        margin-top: 50px;
+        left: -80%;
+        text-align: center;
+    }
+    .social-menu li {
+        font-size: 45px;
+    }
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    
+    .da-student {
+        max-width: max-content;
+        left: 0%;
+        margin-top: -5%;
+    }
+
+    .da-text {
+        font-size: 50px;
+    }
+    .student-text {
+        top: 55%;
+        left: 320%;
+        font-size: 40px;
+    }
+    .menu {
+        width: 115%;
+        left: -53%;
+        padding: 5% 0%;
+    }
+    .menu  li {
+        font-size: 40px;
+        
+    }
+    .social-menu {
+        margin-top: 50px;
+        left: -85%;
+        text-align: center;
+    }
+    .social-menu li {
+        font-size: 40px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .da-student {
+        max-width: max-content;
+        left: 0%;
+    }
+
+    .da-text {
+        font-size: 50px;
+    }
+    .student-text {
+        top: 55%;
+        left: 320%;
+        font-size: 40px;
+    }
+    .menu {
+        width: 100%;
+        left: -47%;
+        padding: 10% 0%;
+    }
+    .menu  li {
+        font-size: 35px;
+    }
+    .social-menu {
+        margin-top: 40px;
+        left: -95%;
+    }
+    .social-menu li {
+        font-size: 35px;
+    }
 }
 
 @media only screen and (min-width: 600px) {
@@ -80,6 +233,7 @@ ul a:hover{
     .col-s-11 {width: 91.66%;}
     .col-s-12 {width: 100%;}
 }
+
 @media only screen and (min-width: 768px) {
     /* For desktop: */
     .col-1 {width: 8.33%;}
@@ -95,124 +249,4 @@ ul a:hover{
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
 }
-
-@media  screen and (min-width: 1200px) {
-    .da-student {
-        left: 20%;
-    }
-
-    .da-text {
-        font-size: 80px;
-    }
-
-    .student-text {
-        left: 40%;
-        font-size: 60px;
-    }
-
-    .menu {
-        left: 25%;
-    }
-
-    .social-menu {
-        margin-top: 70px;
-        left: 93%;
-    }
-}
-
-@media  screen and (min-width: 992px) {
-    .da-student {
-        max-width: max-content;
-        left: 20%;
-    }
-
-    .da-text {
-        font-size: 70px;
-    }
-    .student-text {
-        top: 52%;
-        left: 290%;
-        font-size: 50px;
-    }
-    .menu {
-        left: -30%;
-    }
-    .menu  li {
-        font-size: 50px;
-        
-    }
-    .social-menu {
-        margin-top: 50px;
-        left: -22%;
-        text-align: center;
-    }
-    .social-menu li {s
-        font-size: 40px;
-    }
-}
-
-
-
-@media  screen and (max-width: 768px) {
-    
-    .da-student {
-        max-width: max-content;
-        left: 20%;
-    }
-
-    .da-text {
-        font-size: 70px;
-    }
-    .student-text {
-        top: 52%;
-        left: 290%;
-        font-size: 50px;
-    }
-    .menu {
-        left: -30%;
-    }
-    .menu  li {
-        font-size: 45px;
-        
-    }
-    .social-menu {
-        margin-top: 50px;
-        left: -22%;
-        text-align: center;
-    }
-    .social-menu li {s
-        font-size: 40px;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .da-student {
-        max-width: max-content;
-        left: 20%;
-    }
-
-    .da-text {
-        font-size: 50px;
-    }
-    .student-text {
-        top: 49%;
-        left: 320%;
-        font-size: 40px;
-    }
-    .menu {
-        left: -30%;
-    }
-    .menu  li {
-        font-size: 35px;
-    }
-    .social-menu {
-        margin-top: 70px;
-        left: -20%;
-    }
-    .social-menu li {
-        font-size: 40px;
-    }
-}
-
-
 
