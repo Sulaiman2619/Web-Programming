@@ -42,6 +42,7 @@ body {
 .navigation ul li {
   position: relative;
   list-style: none;
+  margin-top: 20px;
   width: 100%;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
@@ -112,6 +113,7 @@ body {
 .navigation ul li a .icon {
   position: relative;
   display: block;
+  font-size: 30px;
   min-width: 60px;
   height: 60px;
   line-height: 60px;
@@ -121,6 +123,7 @@ body {
 .navigation ul li a .title {
   position: relative;
   display: block;
+  font-size: 20px;
   padding-left: 10px;
   height: 60px;
   line-height: 60px;
@@ -142,7 +145,7 @@ body {
 }
 
 .toggle.active {
-  background-color: #ff4d89;
+  background-color: #f80657;
 }
 
 .toggle i {
