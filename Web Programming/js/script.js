@@ -1,10 +1,7 @@
-function Toggle() {
-  var x = document.getElementById("nav");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
+let menuToggle = document.querySelector ('.toggle');
+let Navbar = document.querySelector ('.nav');
+menuToggle.onclick = function() {
+  Navbar.classList.toggle('active');
 }
 
 let list = document.querySelectorAll('.nav-link');

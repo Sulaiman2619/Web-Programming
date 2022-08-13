@@ -4,42 +4,42 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins',sans-serif;
 }
 
 body {
   min-height: 100vh;
   background: #fff;
+  font-family: 'Poppins',sans-serif;
 }
 
 .navbar {
-  position: fixed;
-  width: 100%;
-  background-color: black;
-}
-
-.navbar .logo {
-  float: left;
-  margin-left: 15%;
-}
-
-.navbar .logo a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 25px;
+  background: #222;
+  padding: 5px 20px;
 }
 
 .navbar ul {
-  float: right;
+  list-style-type: none;
 }
-.navbar li {
-  list-style: none;
-  position: relative;
-  display: inline-block;
-  margin-right: 50px;
-  font-size: 16px;
-  margin-top: 15px;
-  right: 50%;
+
+.navbar ul a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar .logo a {
+  text-decoration: none;
+}
+
+.navbar ul li {
+font-size: 16px;
+padding: 15px 5px;
+white-space: nowrap;
+}
+
+.navbar .logo a,
+.navbar .toggle {
+  color: #fff;
+  font-size: 20px;
 }
 
 .navbar li a {
@@ -51,7 +51,6 @@ body {
 .navbar li a.active {
   border-bottom: 2px solid #fff;
   padding: 2px;
-  
 }
 
 .navbar li a:after {
@@ -60,7 +59,7 @@ body {
   width: 90%;
   transform: scaleX(0);
   height: 2px;
-  bottom: -3px;
+  bottom: 0px;
   left: 0;
   background-color: #fff;
   transform-origin: bottom right;
@@ -72,31 +71,54 @@ body {
   transform-origin: bottom left;
 }
 
-.navbar .toggle {
-  color: #fff;
-  float: right;
-  font-size: 30px;
-  cursor: pointer;
+/* Mobile Menu*/
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
+.toggle {
+  order: 1;
+}
 
+.nav-link {
+  width: 100%;
+  text-align: center;
+  order: 2;
+  display: none;
+}
 
-@media only screen and (max-width: 1200px) {
-  .navbar ul {
+.nav.active {
+  display: block;
+}
+
+/* Tablet Menu */
+@media all and (min-width: 600px) {
+  .navbar .nav {
+    justify-content: center;
+  }
+  .navbar .logo {
+    flex: 1;
+  }
+  .navbar .nav .toggle {
+    width: auto;
+    order: 1;
+    display: block;
+  }
+}
+
+@media all and (min-width: 900px) {
+  .navbar .nav .nav-link {
+    display: block;
+    width: auto;
+  }
+  .navbar .nav .toggle {
     display: none;
   }
-  .navbar .toggle {
-    display: block;
-    margin-right: 20px;
-    margin-top: 5px;
+  .navbar .nav li {
+    margin-right: 50px;
   }
-
 }
-
-
-
-
-
-
-
-
