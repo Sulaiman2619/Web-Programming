@@ -48,13 +48,19 @@ body {
   font-weight: bold;
 }
 
+.navbar li a.active {
+  border-bottom: 2px solid #fff;
+  padding: 2px;
+  
+}
+
 .navbar li a:after {
   content: '';
   position: absolute;
-  width: 80%;
+  width: 90%;
   transform: scaleX(0);
   height: 2px;
-  bottom: 0;
+  bottom: -3px;
   left: 0;
   background-color: #fff;
   transform-origin: bottom right;
@@ -66,17 +72,25 @@ body {
   transform-origin: bottom left;
 }
 
-.navbar i {
+.navbar .toggle {
   color: #fff;
   float: right;
-
+  font-size: 30px;
+  cursor: pointer;
 }
 
+
+
 @media only screen and (max-width: 1200px) {
-  .navbar ul li {
+  .navbar ul {
     display: none;
-  
   }
+  .navbar .toggle {
+    display: block;
+    margin-right: 20px;
+    margin-top: 5px;
+  }
+
 }
 
 
