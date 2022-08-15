@@ -12,25 +12,43 @@
 
 <body>
   <!-- Navbar -->
-  <div class="navbar">
-    <ul class="nav">
-      <h1 class="logo"><a href="index.html">DevFolio</a></h1>
-      <li><a class="nav-link" href="#home">Home</a></li>
-      <li><a class="nav-link " href="#about">About</a></li>
-      <li><a class="nav-link" href="#services">Services</a></li>
-      <li><a class="nav-link" href="#portfolio">Portfolio</a></li>
-      <li><a class="nav-link" href="#contact">Contact</a></li>
-      <div class="toggle">
-        <i class="fa-solid fa-bars"></i>
+  <nav class="navbar">
+    <!-- LOGO -->
+    <div class="logo"><a href="index.html">Data</a></div>
+    <!-- NAVIGATION MENU -->
+    <ul class="nav-links">
+      <!-- USING CHECKBOX HACK -->
+      <input type="checkbox" id="checkbox_toggle" />
+      <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+      <!-- NAVIGATION MENUS -->
+      <div class="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#Services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
       </div>
     </ul>
-    
-  </div>
-
+  </nav>
   <!-- Home -->
-  <section class="home" id="home">
+  <section class="hero">
+    <div class="hero-inner">
+      <h1>My awesome website</h1>
+      <h2>Look at this website and bask in its amazing glory!</h2>
+      <a href="#about" class="btn">Go ahead...</a>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="about-me">
+      <h1>About me</h1>
+      <p>Hello My name is Sulaiman Charaae</p>
+    </div>
+    <div class="about-me large-profile">
+    </div>
 
   </section>
+
 
   <!-- Script -->
   <script src="js/script.js"></script>
