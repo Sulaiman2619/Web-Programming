@@ -1,0 +1,50 @@
+{% extends 'layout.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+<body class="body_liner_login">
+    <div class="container_login">
+        <div class="screen_login">
+            <div class="screen__content_login">
+                <form class="login_login" method="POST">
+                    {% csrf_token %}
+                    <div class="login__field_login">
+                        <i class="login__icon fas fa-user"></i>
+                        <input type="text" class="login__input_login" name="username" placeholder="User name / Email">
+                    </div>
+                    <div class="login__field_login">
+                        <i class="login__icon fas fa-lock"></i>
+                        <input type="password" class="login__input_login"name="password" placeholder="Password">
+                    </div>
+                    <button class="button login__submit_login">
+                        <span class="button__text_login">Log In Now</span>
+                        <i class="button__icon fas fa-chevron-right"></i>
+                    </button>				
+                </form>
+                <div class="social-login_login">
+                    <h3>Not yet a member?</h3>
+                    <div class="register_login">
+                        <a href="{% url 'register' %}">Register</a>
+                    </div>
+                </div>
+            </div>
+            <div class="screen__background_login">
+                <span class="screen__background__shape_login screen__background__shape4_login"></span>
+                <span class="screen__background__shape_login screen__background__shape3_login"></span>		
+                <span class="screen__background__shape_login screen__background__shape2_login"></span>
+                <span class="screen__background__shape_login screen__background__shape1_login"></span>
+            </div>		
+        </div>
+    </div>
+    
+</body>
+</html>
+{% endblock %}

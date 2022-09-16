@@ -1,5 +1,6 @@
 {% load static %}
 
+
 <!-- Bootstrap -->
 <link rel="stylesheet" href="{% static 'plugins/bootstrap/bootstrap.min.css' %}">
 <link rel="stylesheet" href="{% static 'plugins/themify/css/themify-icons.css' %}">
@@ -53,6 +54,11 @@
 					</ul>
 			  </li>
 			   <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
+			   {% if user.is_authenticated %}
+			   <li class="nav-item login"><a class="nav-link" href="{% url 'logout' %}">Logout</a></li>
+			   {% else %}
+			   <li class="nav-item login"><a class="nav-link" href="{% url 'login' %}">Login</a></li>
+			   {% endif %}
 			</ul>
 		</div>
 	</div>
