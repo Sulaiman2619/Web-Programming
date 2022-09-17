@@ -7,6 +7,10 @@ from django.contrib.auth.models import User
 
 # Create your views here.
 
+
+def Member(request):
+    return render(request,'member.html')
+
 def About_us(request):
     return render(request,'about-us.html')
 

@@ -19,4 +19,5 @@ urlpatterns = [
     path('portfolio-single3/', Portfolio_single3,name='portfolio-single3'),
     path('portfolio-single4/', Portfolio_single4,name='portfolio-single4'),
     path('register/',Register,name='register'), 
+    path('member/', Member,name='member'),
 ]
