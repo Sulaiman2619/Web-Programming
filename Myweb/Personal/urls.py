@@ -20,4 +20,5 @@ urlpatterns = [
     path('portfolio-single4/', Portfolio_single4,name='portfolio-single4'),
     path('register/',Register,name='register'), 
     path('member/', Member,name='member'),
+    path('chat/', Chatbox,name='chat')
 ]
