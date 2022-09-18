@@ -69,6 +69,7 @@ def Register(request):
         email = data.get('email')
         password_1 = data.get('password_1')
         password_2 = data.get('password_2')
+        gender = data.get ('gender')
 
         if password_1 == password_2 :
             if User.objects.filter(username=username).exists():
@@ -85,6 +86,7 @@ def Register(request):
                 newuser.email = email
                 newuser.set_password(password_1)
                 newuser.set_password(password_2)
+                
                 newuser.save()
                 return redirect('login')
         else :
