@@ -26,31 +26,21 @@
   
 		  <div class="collapse navbar-collapse" id="navbarsExample09">
 			<ul class="navbar-nav ml-auto">
-			  <li class="nav-item  active"><a class="nav-link" href="{% url 'member' %}">Home</a></li>
+			  <li class="nav-item  active"><a class="nav-link" href="{% url 'index' %}">Home</a></li>
 
 			  <li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</a>
 					<ul class="dropdown-menu" aria-labelledby="dropdown01">
 						<li><a class="dropdown-item" href="{% url 'about' %}">About Me</a></li>
-						<li><a class="dropdown-item" href="{% url 'about-us' %}">About Us</a></li>
+						<li><a class="dropdown-item" href="{% url 'member' %}">Member</a></li>
 					</ul>
 			  </li>
 
-			  <li class="nav-item dropdown active">
-					<a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Portfolio</a>
-					<ul class="dropdown-menu" aria-labelledby="dropdown02">
-						<li><a class="dropdown-item" href="{% url 'portfolio-1' %}">Portfolio Masonary</a></li>
-						<li><a class="dropdown-item" href="{% url 'portfolio-2' %}">Portfolio lightbox</a></li>
-						<li><a class="dropdown-item" href="{% url 'portfolio-3' %}">Portfolio 2 column</a></li>
-						<li><a class="dropdown-item" href="{% url 'portfolio-single' %}">Portfolio Details</a></li>
-					</ul>
-			  </li>
 			   <li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blog</a>
 					<ul class="dropdown-menu" aria-labelledby="dropdown05">
-						<li><a class="dropdown-item" href="{% url 'blog-grid' %}">Blog Grid</a></li>
-						<li><a class="dropdown-item" href="{% url 'blog-sidebar' %}">Blog with Sidebar</a></li>
-						<li><a class="dropdown-item" href="{% url 'blog-single' %}">Blog Single</a></li>
+						<li><a class="dropdown-item" href="{% url 'project' %}">Project</a></li>
+						<li><a class="dropdown-item" href="{% url 'content' %}">Content</a></li>
 					</ul>
 			  </li>
 			   <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>

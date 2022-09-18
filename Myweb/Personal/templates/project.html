@@ -13,7 +13,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Thomson-Minimal Portfolio Temaplate</title>
+	<title>project</title>
 
 	<!-- mobile responsive meta -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -43,74 +43,150 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="text-center">
-						<h1 class="text-capitalize mb-0 text-lg">Portfolio Single</h1>
+						<h1 class="text-capitalize mb-0 text-lg">PROJECT</h1>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 
-
-	<section class="section portfolio-single">
+	<section class="section blog-post">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-6">
-					<img src="{% static 'images/portfolio/9.jpg' %}" alt="" class="img-fluid w-100">
+				<div class="col-lg-4 col-md-6">
+					<div class="post mb-5">
+						<a class="image-content" href="{% url 'content' %}">
+							<img src="{% static 'images/blog/minimal-1.jpg' %}" alt="" class="img-fluid">
+						</a>
+
+						<div class="post-content">
+							<span class="date text-uppercase text-sm">semester 2 first year</span>
+							<a href="{% url 'content' %}">
+								<h4>ARIMA PREDICTION.
+								</h4>
+							</a>
+						</div>
+					</div>
 				</div>
 
-				<div class="col-lg-6">
-					<div class="project-info">
-						<h3 class="mb-4">Photography</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi eligendi fugiat ad
-							cupiditate hic, eum debitis ipsum, quos non mollitia. Commodi suscipit obcaecati et, aperiam
-							quas vero quo, labore tempore.</p>
+				<div class="col-lg-4 col-md-6">
+					<div class="post mb-5">
+						<a class="image-content" href="{% url 'content' %}">
+							<img src="{% static 'images/blog/minimal-2.jpg' %}" alt="" class="img-fluid">
+						</a>
 
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam debitis beatae doloremque
-							cupiditate vel repellat nam est voluptates, magnam quod explicabo fugit, quidem.</p>
+						<div class="post-content">
+							<span class="date text-uppercase text-sm">semester 2 second year</span>
 
-						<div class="row mt-4">
-							<div class="col-lg-6">
-								<div class="info">
-									<h5 class="mb-0">Client</h5>
-									<p>Thomson</p>
-								</div>
+							<a href="{% url 'content' %}">
+								<h4>python guess game.</h4>
+							</a>
+						</div>
+					</div>
+				</div>
 
-								<div class="info">
-									<h5 class="mb-0">Year</h5>
-									<p>2019</p>
-								</div>
-								<div class="mt-4">
-									<a href="#" class="btn btn-main btn-small">View project</a>
-								</div>
-							</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="post mb-5">
+						<a class="image-content" href="{% url 'content' %}">
+							<img src="{% static 'images/blog/minimal-3.jpg' %}" alt="" class="img-fluid">
+						</a>
 
-							<div class="col-lg-6">
-								<div class="info">
-									<h5 class="mb-0">Category</h5>
-									<p>Web Design</p>
-								</div>
-								<div class="info">
-									<h5>Share</h5>
-									<a href="#"><i class="ti-facebook"></i></a>
-									<a href="#"><i class="ti-twitter"></i></a>
-									<a href="#"><i class="ti-pinterest"></i></a>
-									<a href="#"><i class="ti-dribbble"></i></a>
-								</div>
-							</div>
+						<div class="post-content">
+							<span class="date text-uppercase text-sm">semester 1 third year</span>
+
+							<a href="{% url 'content' %}">
+								<h4>Data mining with Knime</h4>
+							</a>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6">
+					<div class="post mb-5 mb-lg-0">
+						<a class="image-content" href="{% url 'content' %}">
+							<img src="{% static 'images/blog/minimal-4.jpg' %}" alt="" class="img-fluid">
+						</a>
+
+						<div class="post-content">
+							<span class="date text-uppercase text-sm">semester 1 second year</span>
+
+							<a href="{% url 'content' %}">
+								<h4>Power BI Dashboard .
+								</h4>
+							</a>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6">
+					<div class="post mb-5 mb-lg-0">
+						<a class="image-content" href="{% url 'content' %}">
+							<img src="{% static 'images/blog/minimal-3.jpg' %}" alt="" class="img-fluid">
+						</a>
+
+						<div class="post-content">
+							<span class="date text-uppercase text-sm">semester 2 second year</span>
+
+							<a href="{% url 'content' %}">
+								<h4>Big data and data warehouse.</h4>
+							</a>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6">
+					<div class="post mb-5 mb-lg-0">
+						<a class="image-content" href="{% url 'content' %}">
+							<img src="{% static 'images/blog/minimal-2.jpg' %}" alt="" class="img-fluid">
+						</a>
+
+						<div class="post-content">
+							<span class="date text-uppercase text-sm">semester 1 third year</span>
+
+							<a href="{% url 'content' %}">
+								<h4>Django web Development</h4>
+							</a>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="row mt-5 justify-content-center">
-				<div class="col-lg-6 text-center">
-					<a href="portfolio-single4.html" class="btn btn-dark">Previous Work</a>
-					<a href="portfolio-single2.html" class="btn btn-dark">Next Work</a>
+
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="pagination">
+						<ul class="list-inline d-block mx-auto">
+							<li class="list-inline-item">
+								<a href="#">Prev</a>
+							</li>
+							<li class="active list-inline-item">
+								<a href="#">
+									<span>1</span>
+								</a>
+							</li>
+							<li class="list-inline-item">
+								<a href="#">
+									<span>2</span>
+								</a>
+							</li>
+							<li class="list-inline-item">
+								<a href="#">
+									<span>3</span>
+								</a>
+							</li>
+							<li class="list-inline-item">
+								<a href="#">Next</a>
+							</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 
-
+	<!-- Footer start -->
 	<section class="footer">
 		<div class="container">
 			<div class="row ">
