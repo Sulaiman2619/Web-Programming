@@ -37,26 +37,6 @@ def Contact(request):
 def Index(request):
     return render(request,'index.html')
 
-def Portfolio_1(request):
-    return render(request,'portfolio-1.html')
-
-def Portfolio_2(request):
-    return render(request,'portfolio-2.html')
-
-def Portfolio_3(request):
-    return render(request,'portfolio-3.html')
-
-def Portfolio_single(request):
-    return render(request,'portfolio-single.html')
-
-def Portfolio_single2(request):
-    return render(request,'portfolio-single2.html')
-
-def Portfolio_single3(request):
-    return render(request,'portfolio-single3.html')
-
-def Portfolio_single4(request):
-    return render(request,'portfolio-single4.html')
 
 def Register(request):
     if request.method == 'POST':
