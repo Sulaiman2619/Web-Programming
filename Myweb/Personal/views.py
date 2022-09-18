@@ -17,14 +17,12 @@ def About_us(request):
 def About(request):
     return render(request,'about.html')
 
-def Blog_grid(request):
-    return render(request,'blog-grid.html')
+def project(request):
+    return render(request,'project.html')
 
-def Blog_sidebar(request):
-    return render(request,'blog-sidebar.html')
+def content(request):
+    return render(request,'content.html')
 
-def Blog_single(request):
-    return render(request,'blog-single.html')
 
 def Contact(request):
     if request.method=='POST':
