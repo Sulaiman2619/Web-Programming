@@ -94,7 +94,5 @@ def Register(request):
             return redirect ('register')
     return render(request,'register.html')
 
-def Chatbox(request):
-    return render(request,'base.html')
 
 
