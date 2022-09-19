@@ -35,6 +35,10 @@ body {
   color: #818385;
 }
 
+.banner {
+  background-color: #833133;
+}
+
 p {
   color: #818385;
 }
@@ -844,11 +848,11 @@ textarea.form-control {
 
 .footer {
   padding: 60px 0px;
-  background: #000;
+  background: #833133;
 }
 
 .footer-widget a {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(247, 240, 240);
   text-transform: capitalize;
 }
 
