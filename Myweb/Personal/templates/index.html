@@ -89,11 +89,11 @@
 					data-groups="[&quot;design&quot;,&quot;illustration&quot;]">
 					<div class="position-relative inner-box">
 						<div class="image position-relative ">
-							<img src="https://unsplash.com/photos/pypeCEaJeZY" alt="portfolio-image" class="img-fluid w-100 d-block">
+							<img src="{% static '/images/design1.jpg' %}" alt="portfolio-image" class="img-fluid w-100 d-block">
 							<div class="overlay-box">
 								<div class="overlay-inner">
-									<a class="overlay-content" href="portfolio-single.html">
-										<h5 class="mb-0">Painting</h5>
+									<a class="overlay-content" href="index.html">
+										<h5 class="mb-0">Database</h5>
 										<p>Design</p>
 									</a>
 								</div>
@@ -105,10 +105,10 @@
 				<div class="col-lg-4 col-6 mb-4 shuffle-item" data-groups="[&quot;branding&quot;]">
 					<div class="position-relative inner-box">
 						<div class="image position-relative ">
-							<img src="images/portfolio/4.jpg" alt="portfolio-image" class="img-fluid w-100 d-block">
+							<img src="{% static 'images/web1.jpg'%}" alt="portfolio-image" class="img-fluid w-100 d-block">
 							<div class="overlay-box">
 								<div class="overlay-inner">
-									<a class="overlay-content" href="portfolio-single.html">
+									<a class="overlay-content" href="index.html">
 										<h5 class="mb-0">Web app</h5>
 										<p>Development</p>
 									</a>
@@ -121,10 +121,10 @@
 				<div class="col-lg-4 col-6 mb-4 shuffle-item" data-groups="[&quot;illustration&quot;]">
 					<div class="position-relative inner-box">
 						<div class="image position-relative ">
-							<img src="images/portfolio/3.jpg" alt="portfolio-image" class="img-fluid w-100 d-block">
+							<img src="{% static 'images/business1.jpg'%}" alt="portfolio-image" class="img-fluid w-100 d-block">
 							<div class="overlay-box">
 								<div class="overlay-inner">
-									<a class="overlay-content" href="portfolio-single.html">
+									<a class="overlay-content" href="index.html">
 										<h5 class="mb-0">Business </h5>
 										<p>marketing</p>
 									</a>
@@ -137,11 +137,11 @@
 				<div class="col-lg-4 col-6 mb-4 shuffle-item" data-groups="[&quot;design&quot;,&quot;branding&quot;]">
 					<div class="position-relative inner-box">
 						<div class="image position-relative ">
-							<img src="images/portfolio/5.jpg" alt="portfolio-image" class="img-fluid w-100 d-block">
+							<img src="{% static 'images/dashboard.jpg'%}" alt="portfolio-image" class="img-fluid w-100 d-block">
 							<div class="overlay-box">
 								<div class="overlay-inner">
-									<a class="overlay-content" href="portfolio-single.html">
-										<h5 class="mb-0">Portfolio</h5>
+									<a class="overlay-content" href="index.html">
+										<h5 class="mb-0">Dashboard</h5>
 										<p>Design</p>
 									</a>
 								</div>
@@ -153,12 +153,12 @@
 				<div class="col-lg-4 col-6 mb-4 shuffle-item" data-groups="[&quot;illustration&quot;]">
 					<div class="position-relative inner-box">
 						<div class="image position-relative ">
-							<img src="images/portfolio/6.jpg" alt="portfolio-image" class="img-fluid w-100 d-block">
+							<img src="{% static 'images/web2.jpg'%}" alt="portfolio-image" class="img-fluid w-100 d-block">
 							<div class="overlay-box">
 								<div class="overlay-inner">
-									<a class="overlay-content" href="portfolio-single.html">
-										<h5 class="mb-0 ">Modern web</h5>
-										<p>Seo</p>
+									<a class="overlay-content" href="index.html">
+										<h5 class="mb-0 ">Analyst</h5>
+										<p>Data Science</p>
 									</a>
 								</div>
 							</div>
@@ -169,11 +169,11 @@
 				<div class="col-lg-4 col-6 mb-4 shuffle-item" data-groups="[&quot;design&quot;,&quot;photo&quot;]">
 					<div class="position-relative inner-box">
 						<div class="image position-relative ">
-							<img src="images/portfolio/7.jpg" alt="portfolio-image" class="img-fluid w-100 d-block">
+							<img src="{% static 'images/video.jpg'%}" alt="portfolio-image" class="img-fluid w-100 d-block">
 							<div class="overlay-box">
 								<div class="overlay-inner">
-									<a class="overlay-content" href="portfolio-single.html">
-										<h5 class="mb-0">Agency web</h5>
+									<a class="overlay-content" href="index.html">
+										<h5 class="mb-0">Editor</h5>
 										<p>Design</p>
 									</a>
 								</div>
@@ -293,6 +293,17 @@
 	</script>
 	<!-- Main Script -->
 	<script src="{% static 'js/script.js'  %}"></script>
+
+	<script type="text/javascript">
+		(function(d, m){
+			var kommunicateSettings = 
+				{"appId":"359e929afa3d479d80a146d5561eb94b6","popupWidget":true,"automaticChatOpenOnNavigation":true};
+			var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+			s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+			var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
+			window.kommunicate = m; m._globals = kommunicateSettings;
+		})(document, window.kommunicate || {});
+	</script>
 </body>
 
 </html>
