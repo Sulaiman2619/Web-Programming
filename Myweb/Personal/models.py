@@ -13,3 +13,9 @@ class Contactmessage(models.Model):
         return self.first_name
 
 
+class MemberImages(models.Model):
+    image = models.ImageField(upload_to ='images/%y')
+    name = models.CharField(max_length=200)
+    text = models.CharField(max_length=500)
+    def __str__(self):
+        return self.name

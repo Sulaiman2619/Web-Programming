@@ -122,6 +122,11 @@ STATICFILES_DIRS = [
 
 STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR),"static_cdm","static_root")
 
+
+
+MEDIA_ROOT= os.path.join(BASE_DIR,"media/")
+MEDIA_URL= "/media/"
+
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 LOGIN_URL = 'index'

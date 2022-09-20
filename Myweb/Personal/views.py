@@ -2,6 +2,7 @@ from django.shortcuts import render,redirect
 from .models import Contactmessage
 from django.contrib import messages
 from django.contrib.auth.models import User
+from .models import *
 
 
 
@@ -9,7 +10,8 @@ from django.contrib.auth.models import User
 
 
 def Member(request):
-    return render(request,'member.html')
+    images = MemberImages.objects.all()
+    return render(request,'member.html',{'images':images})
 
 def About_us(request):
     return render(request,'about-us.html')
