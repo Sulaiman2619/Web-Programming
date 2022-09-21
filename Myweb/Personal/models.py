@@ -15,9 +15,16 @@ class Contactmessage(models.Model):
 
 
 class MemberImages(models.Model):
-    image = models.ImageField(upload_to ='images/%y')
+    image = models.ImageField(upload_to ='images/member')
     name = models.CharField(max_length=200)
     text = models.CharField(max_length=500)
     def __str__(self):
         return self.name
 
+class Project1(models.Model):
+    image = models.ImageField(upload_to ='images/project')
+    topic = models.CharField(max_length=200)
+    text = models.CharField(max_length=500)
+    file = models.FileField(upload_to = 'documents/', blank=True)
+    def __str__(self):
+        return self.topic
