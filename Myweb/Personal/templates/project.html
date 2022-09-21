@@ -53,103 +53,24 @@
 	<section class="section blog-post">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-4 col-md-6">
-					<div class="post mb-5">
-						<a class="image-content" href="{% url 'content' %}">
-							<img src="{% static 'images/blog/minimal-1.jpg' %}" alt="" class="img-fluid">
-						</a>
-
-						<div class="post-content">
-							<span class="date text-uppercase text-sm">semester 2 first year</span>
-							<a href="{% url 'content' %}">
-								<h4>ARIMA PREDICTION.
-								</h4>
+				<div class="row">
+					{% for x in project %}
+					<div class="col-lg-4 col-md-6">
+						<div class="post mb-5">
+							<a class="image-content" href="{{x.file.url}}">
+								<img style="width: 1050px; height: 350px;" src="{{x.image.url}}" alt="" class="img-fluid">
 							</a>
+	
+							<div class="post-content">
+								<a href="{{x.flie.url}}">
+									<h4>{{x.topic}}</h4>
+								</a>
+								<span class="date text-uppercase text-sm">{{x.text}}</span>
+								
+							</div>
 						</div>
 					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-6">
-					<div class="post mb-5">
-						<a class="image-content" href="{% url 'content' %}">
-							<img src="{% static 'images/blog/minimal-2.jpg' %}" alt="" class="img-fluid">
-						</a>
-
-						<div class="post-content">
-							<span class="date text-uppercase text-sm">semester 2 second year</span>
-
-							<a href="{% url 'content' %}">
-								<h4>python guess game.</h4>
-							</a>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-6">
-					<div class="post mb-5">
-						<a class="image-content" href="{% url 'content' %}">
-							<img src="{% static 'images/blog/minimal-3.jpg' %}" alt="" class="img-fluid">
-						</a>
-
-						<div class="post-content">
-							<span class="date text-uppercase text-sm">semester 1 third year</span>
-
-							<a href="{% url 'content' %}">
-								<h4>Data mining with Knime</h4>
-							</a>
-
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-6">
-					<div class="post mb-5 mb-lg-0">
-						<a class="image-content" href="{% url 'content' %}">
-							<img src="{% static 'images/blog/minimal-4.jpg' %}" alt="" class="img-fluid">
-						</a>
-
-						<div class="post-content">
-							<span class="date text-uppercase text-sm">semester 1 second year</span>
-
-							<a href="{% url 'content' %}">
-								<h4>Power BI Dashboard.</h4>
-							</a>
-
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-6">
-					<div class="post mb-5 mb-lg-0">
-						<a class="image-content" href="{% url 'content' %}">
-							<img src="{% static 'images/blog/minimal-3.jpg' %}" alt="" class="img-fluid">
-						</a>
-
-						<div class="post-content">
-							<span class="date text-uppercase text-sm">semester 2 second year</span>
-
-							<a href="{% url 'content' %}">
-								<h4>Big data and data warehouse.</h4>
-							</a>
-
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-6">
-					<div class="post mb-5 mb-lg-0">
-						<a class="image-content" href="{% url 'content' %}">
-							<img src="{% static 'images/blog/minimal-2.jpg' %}" alt="" class="img-fluid">
-						</a>
-
-						<div class="post-content">
-							<span class="date text-uppercase text-sm">semester 1 third year</span>
-
-							<a href="{% url 'content' %}">
-								<h4>Django web Development</h4>
-							</a>
-						</div>
-					</div>
+					{% endfor %}
 				</div>
 			</div>
 
