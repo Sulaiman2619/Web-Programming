@@ -37,15 +37,12 @@
                                     </header>
                                     <div class="item_fulltext">
                                         <p>&nbsp;</p>
-                                        <p style="text-align: center;"><img src="/2019/images/team/photo01.jpg"
-                                                alt="photo01" width="250" height="244" /></p>
-                                        <h4 style="text-align: center;">Abdul Fattah Samae</h4>
-                                        <p style="text-align: center;"><strong>หัวหน้าสาขาวิทยาการข้อมูลและการวิเคราะห์</strong></p>
                                         <table style="width: 100%;">
+                                             
                                             <tbody>
-                                                <tr class="row">
+                                                <tr class="row justify-content-start">
                                                     {% for img in images %}
-                                                    <th class="col">
+                                                    <th class="col-4">
                                                         <p><img src="{{img.image.url}}" alt="b02" width="250"
                                                                 height="244" /></p>
                                                         <h4>{{img.name}}</h4>
@@ -55,32 +52,8 @@
                                                 </tr>
                                             </tbody>
                                         </table>
-                                        <div class="fastsocialshare_container fastsocialshare-align-left">
-                                            <div class="fastsocialshare-subcontainer">
-                                                <script>
-                                                    var loadAsyncDeferredFacebook = function () {
-                                                        (function (d, s, id) {
-                                                            var js, fjs = d.getElementsByTagName(s)[0];
-                                                            if (d.getElementById(id)) return;
-                                                            js = d.createElement(s);
-                                                            js.id = id;
-                                                            js.src =
-                                                                "//connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v3.0";
-                                                            fjs.parentNode.insertBefore(js, fjs);
-                                                        }(document, 'script', 'facebook-jssdk'));
-                                                    }
-
-                                                    if (window.addEventListener)
-                                                        window.addEventListener("load", loadAsyncDeferredFacebook,
-                                                            false);
-                                                    else if (window.attachEvent)
-                                                        window.attachEvent("onload", loadAsyncDeferredFacebook);
-                                                    else
-                                                        window.onload = loadAsyncDeferredFacebook;
-                                                </script>
-
-                                            </div>
-                                        </div>
+                                       
+                                        
                                     </div>
 
 
