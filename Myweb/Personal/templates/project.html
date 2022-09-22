@@ -36,7 +36,7 @@
 
 </head>
 
-<body>
+<body  ng-app="myApp">
 
 	<section class="page-title section pb-0">
 		<div class="container">
@@ -82,7 +82,7 @@
 								<a href="#">Prev</a>
 							</li>
 							<li class="active list-inline-item">
-								<a href="#">
+								<a href="#!red">
 									<span>1</span>
 								</a>
 							</li>
@@ -135,6 +135,32 @@
 			</div>
 		</div>
 	</section>
+
+	<script>
+		var app = angular.module("myApp", ["ngRoute"]);
+	
+		//DEFINE THE CONTROLLER
+		////////////////////////////////
+		app.controller("myController", function() {
+	
+		});
+	
+		app.config(function($routeProvider) {
+		  $routeProvider
+			.when("/", {
+			  template: "<h1>Home</h1>"
+			})
+			.when("/red", {
+			  template: "<h1>Red</h1>"
+			})
+			.when("/green", {
+			  template: "<h1>Green</h1>"
+			})
+			.when("/blue", {
+			  template: "<h1>Blue</h1>"
+			});
+		});
+	  </script>
 	<!-- jQuery -->
 	<script src="{% static 'plugins/jQuery/jquery.min.js' %}"></script>
 	<!-- Bootstrap JS -->
