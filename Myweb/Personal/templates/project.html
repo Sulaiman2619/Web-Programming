@@ -19,6 +19,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	{% load static %}
+	{% load sass_tags %}
+	<link href="{% sass_src 'css/style.scss' %}" rel="stylesheet" type="text/css" />
 
 	<!-- ** Plugins Needed for the Project ** -->
 	<!-- Bootstrap -->
@@ -30,6 +32,7 @@
 	<link rel="stylesheet" href="{% static 'plugins/owl-carousel/owl.theme.default.min.css' %}">
 	<link rel="stylesheet" href="{% static 'plugins/magnific-popup/magnific-popup.css' %}">
 	<link rel="stylesheet" href="{% static 'plugins/animated-text/animated-text.css' %}">
+	
 
 	<!-- Main Stylesheet -->
 	<link href="{% static 'css/style.css' %}" rel="stylesheet">
@@ -57,16 +60,18 @@
 					{% for x in project %}
 					<div class="col-lg-4 col-md-6">
 						<div class="post mb-5">
-							<a class="image-content" href="{{x.file.url}}">
-								<img style="width: 1050px; height: 350px;" src="{{x.image.url}}" alt="" class="img-fluid">
+							<a class="image-content" href="">
+								<img style="width: 1050px; height: 350px;" src="{{x.image.url}}" alt=""
+									class="img-fluid">
 							</a>
-	
+
 							<div class="post-content">
-								<a href="{{x.flie.url}}">
-									<h4>{{x.topic}}</h4>
-								</a>
-								<span class="date text-uppercase text-sm">{{x.text}}</span>
-								
+
+								<h4>{{x.topic}}</h4>
+
+								<span class="date  text-sm">{{x.text}}</span>
+								<h1 class="download"><a href="{{x.flie.url}}">Download</a></span></h1>
+
 							</div>
 						</div>
 					</div>
@@ -77,30 +82,19 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="pagination">
-						<ul class="list-inline d-block mx-auto">
-							<li class="list-inline-item">
-								<a href="#">Prev</a>
+						<ul class="pagination justify-content-center">
+							<li class="page-item disabled">
+								<a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
 							</li>
-							<li class="active list-inline-item">
-								<a href="#!red">
-									<span>1</span>
-								</a>
-							</li>
-							<li class="list-inline-item">
-								<a href="#!red">
-									<span>2</span>
-								</a>
-							</li>
-							<li class="list-inline-item">
-								<a href="#">
-									<span>3</span>
-								</a>
-							</li>
-							<li class="list-inline-item">
-								<a href="#">Next</a>
+							<li class="page-item"><a class="page-link" href="#">1</a></li>
+							<li class="page-item"><a class="page-link" href="#">2</a></li>
+							<li class="page-item"><a class="page-link" href="#">3</a></li>
+							<li class="page-item">
+								<a class="page-link" href="#">Next</a>
 							</li>
 						</ul>
 					</div>
+
 				</div>
 			</div>
 		</div>
@@ -136,7 +130,7 @@
 		</div>
 	</section>
 
-	
+
 	<!-- jQuery -->
 	<script src="{% static 'plugins/jQuery/jquery.min.js' %}"></script>
 	<!-- Bootstrap JS -->
