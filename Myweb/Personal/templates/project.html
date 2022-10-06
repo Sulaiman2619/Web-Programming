@@ -20,6 +20,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	{% load static %}
 
+
 	<!-- ** Plugins Needed for the Project ** -->
 	<!-- Bootstrap -->
 	<link rel="stylesheet" href="{% static 'plugins/bootstrap/bootstrap.min.css' %}">
@@ -30,6 +31,7 @@
 	<link rel="stylesheet" href="{% static 'plugins/owl-carousel/owl.theme.default.min.css' %}">
 	<link rel="stylesheet" href="{% static 'plugins/magnific-popup/magnific-popup.css' %}">
 	<link rel="stylesheet" href="{% static 'plugins/animated-text/animated-text.css' %}">
+	
 
 	<!-- Main Stylesheet -->
 	<link href="{% static 'css/style.css' %}" rel="stylesheet">
@@ -53,134 +55,45 @@
 	<section class="section blog-post">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-4 col-md-6">
-					<div class="post mb-5">
-						<a class="image-content" href="{% url 'content' %}">
-							<img src="{% static 'images/blog/minimal-1.jpg' %}" alt="" class="img-fluid">
-						</a>
-
-						<div class="post-content">
-							<span class="date text-uppercase text-sm">semester 2 first year</span>
-							<a href="{% url 'content' %}">
-								<h4>ARIMA PREDICTION.
-								</h4>
-							</a>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-6">
-					<div class="post mb-5">
-						<a class="image-content" href="{% url 'content' %}">
-							<img src="{% static 'images/blog/minimal-2.jpg' %}" alt="" class="img-fluid">
-						</a>
-
-						<div class="post-content">
-							<span class="date text-uppercase text-sm">semester 2 second year</span>
-
-							<a href="{% url 'content' %}">
-								<h4>python guess game.</h4>
-							</a>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-6">
-					<div class="post mb-5">
-						<a class="image-content" href="{% url 'content' %}">
-							<img src="{% static 'images/blog/minimal-3.jpg' %}" alt="" class="img-fluid">
-						</a>
-
-						<div class="post-content">
-							<span class="date text-uppercase text-sm">semester 1 third year</span>
-
-							<a href="{% url 'content' %}">
-								<h4>Data mining with Knime</h4>
+				<div class="row">
+					{% for x in project %}
+					<div class="col-lg-4 col-md-6">
+						<div class="post mb-5">
+							<a class="image-content" href="">
+								<img style="width: 1050px; height: 350px;" src="{{x.image.url}}" alt=""
+									class="img-fluid">
 							</a>
 
+							<div class="post-content">
+
+								<h4>{{x.topic}}</h4>
+
+								<span class="date  text-sm">{{x.text}}</span>
+								<h1 class="download"><a href="{{x.flie.url}}">Download</a></span></h1>
+
+							</div>
 						</div>
 					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-6">
-					<div class="post mb-5 mb-lg-0">
-						<a class="image-content" href="{% url 'content' %}">
-							<img src="{% static 'images/blog/minimal-4.jpg' %}" alt="" class="img-fluid">
-						</a>
-
-						<div class="post-content">
-							<span class="date text-uppercase text-sm">semester 1 second year</span>
-
-							<a href="{% url 'content' %}">
-								<h4>Power BI Dashboard .
-								</h4>
-							</a>
-
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-6">
-					<div class="post mb-5 mb-lg-0">
-						<a class="image-content" href="{% url 'content' %}">
-							<img src="{% static 'images/blog/minimal-3.jpg' %}" alt="" class="img-fluid">
-						</a>
-
-						<div class="post-content">
-							<span class="date text-uppercase text-sm">semester 2 second year</span>
-
-							<a href="{% url 'content' %}">
-								<h4>Big data and data warehouse.</h4>
-							</a>
-
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-6">
-					<div class="post mb-5 mb-lg-0">
-						<a class="image-content" href="{% url 'content' %}">
-							<img src="{% static 'images/blog/minimal-2.jpg' %}" alt="" class="img-fluid">
-						</a>
-
-						<div class="post-content">
-							<span class="date text-uppercase text-sm">semester 1 third year</span>
-
-							<a href="{% url 'content' %}">
-								<h4>Django web Development</h4>
-							</a>
-						</div>
-					</div>
+					{% endfor %}
 				</div>
 			</div>
 
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="pagination">
-						<ul class="list-inline d-block mx-auto">
-							<li class="list-inline-item">
-								<a href="#">Prev</a>
+						<ul class="pagination justify-content-center">
+							<li class="page-item disabled">
+								<a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
 							</li>
-							<li class="active list-inline-item">
-								<a href="#">
-									<span>1</span>
-								</a>
-							</li>
-							<li class="list-inline-item">
-								<a href="#">
-									<span>2</span>
-								</a>
-							</li>
-							<li class="list-inline-item">
-								<a href="#">
-									<span>3</span>
-								</a>
-							</li>
-							<li class="list-inline-item">
-								<a href="#">Next</a>
+							<li class="page-item"><a class="page-link" href="#">1</a></li>
+							<li class="page-item"><a class="page-link" href="#">2</a></li>
+							<li class="page-item"><a class="page-link" href="#">3</a></li>
+							<li class="page-item">
+								<a class="page-link" href="#">Next</a>
 							</li>
 						</ul>
 					</div>
+
 				</div>
 			</div>
 		</div>
@@ -215,6 +128,8 @@
 			</div>
 		</div>
 	</section>
+
+
 	<!-- jQuery -->
 	<script src="{% static 'plugins/jQuery/jquery.min.js' %}"></script>
 	<!-- Bootstrap JS -->

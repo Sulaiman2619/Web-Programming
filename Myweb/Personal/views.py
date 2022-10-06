@@ -1,7 +1,7 @@
 from django.shortcuts import render,redirect
-from .models import Contactmessage
 from django.contrib import messages
 from django.contrib.auth.models import User
+from .models import *
 
 
 
@@ -9,7 +9,8 @@ from django.contrib.auth.models import User
 
 
 def Member(request):
-    return render(request,'member.html')
+    images = MemberImages.objects.all()
+    return render(request,'member.html',{'images':images})
 
 def About_us(request):
     return render(request,'about-us.html')
@@ -18,7 +19,8 @@ def About(request):
     return render(request,'about.html')
 
 def project(request):
-    return render(request,'project.html')
+    project = Project1.objects.all()
+    return render(request,'project.html', {'project':project})
 
 def content(request):
     return render(request,'content.html')
