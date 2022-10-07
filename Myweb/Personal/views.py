@@ -20,7 +20,19 @@ def About(request):
 
 def project(request):
     project = Project1.objects.all()
-    return render(request,'project.html', {'project':project})
+    
+    
+    if request.user.is_authenticated:
+        Email = request.user.email
+        FTUuser = Student.objects.filter(email=Email)
+        if  FTUuser :
+            return render(request,'project.html', {'project':project})
+        else :
+            messages.info(request,"เฉพาะ FTU Student")
+            return redirect ('index')
+    else :
+        messages.info(request,"Please Login First")
+        return redirect ('login')
 
 def content(request):
     return render(request,'content.html')
@@ -49,7 +61,8 @@ def Register(request):
         email = data.get('email')
         password_1 = data.get('password_1')
         password_2 = data.get('password_2')
-        gender = data.get ('gender')
+        gender= data.get('gender')
+        age = data.get ('age')
 
         if password_1 == password_2 :
             if User.objects.filter(username=username).exists():
@@ -66,8 +79,8 @@ def Register(request):
                 newuser.email = email
                 newuser.set_password(password_1)
                 newuser.set_password(password_2)
-                
                 newuser.save()
+                Username.objects.create(username=username,first_name=firstname,last_name=lastname,email=email,age=age,gender=gender)
                 return redirect('login')
         else :
             messages.info(request,"รหัสผ่านไม่ตรงกัน")

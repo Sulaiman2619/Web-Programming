@@ -11,3 +11,6 @@ class  ProjectAdmin(admin.ModelAdmin):
     readonly_fields = ('id',)
 
 admin.site.register(Project1, ProjectAdmin)
+
+admin.site.register(Student)
+

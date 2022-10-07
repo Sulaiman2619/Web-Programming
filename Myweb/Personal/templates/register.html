@@ -53,15 +53,18 @@
                     {% endfor %}
                     <div class="login__field_login">
                         <label for="gender" class="gender">Gender</label> <br>
-                        <!-- <fieldset id="setD" class="setD" name="gender">
+                        <fieldset id="setD" class="setD" name="gender">
                             <input id="setD_male" class="setD_male" type="radio" name="gender">
                             <label for="setD_male">Male</label>
                             <input id="setD_female" class="setD_female" type="radio" name="gender">
                             <label for="setD_female">Female</label>
-                        </fieldset> -->
-                        <input type="text" class="login__input_login" name="gender" required>
+                        </fieldset>
                     </div>
-
+                    <div class="login__field_login">
+                        <i class="login__icon fas fa-lock"></i>
+                        <input type="text" class="login__input_login" name="age"
+                            placeholder="Age" required>
+                    </div>
                     <button class="button login__submit_login">
                         <span class="button__text_login">Submit</span>
                         <i class="button__icon fas fa-chevron-right"></i>
