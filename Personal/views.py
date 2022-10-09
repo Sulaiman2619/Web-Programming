@@ -20,16 +20,15 @@ def About(request):
 
 def project(request):
     project = Project1.objects.all()
-    
-    
     if request.user.is_authenticated:
         Email = request.user.email
         FTUuser = Student.objects.filter(email=Email)
-        if  FTUuser :
-            return render(request,'project.html', {'project':project})
-        else :
-            messages.info(request,"Premium Access. Contact Us To Update.")
-            return redirect ('index')
+        return render(request,'project.html', {'project':project ,'email':FTUuser})
+        # if  FTUuser :
+        #     return render(request,'project.html', {'project':project ,'email':FTUuser})
+        # else :
+        #     messages.info(request,"เฉพาะ FTU Student")
+        #     return redirect ('index')
     else :
         messages.info(request,"Please Login First")
         return redirect ('login')
