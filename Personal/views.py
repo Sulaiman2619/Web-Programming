@@ -23,12 +23,12 @@ def project(request):
     if request.user.is_authenticated:
         Email = request.user.email
         FTUuser = Student.objects.filter(email=Email)
-        return render(request,'project.html', {'project':project ,'email':FTUuser})
-        # if  FTUuser :
-        #     return render(request,'project.html', {'project':project ,'email':FTUuser})
-        # else :
-        #     messages.info(request,"เฉพาะ FTU Student")
-        #     return redirect ('index')
+        # return render(request,'project.html', {'project':project ,'email':FTUuser})
+        if  FTUuser :
+            return render(request,'project.html', {'project':project ,'email':FTUuser})
+        else :
+            messages.info(request,"You must register premium first")
+            return redirect ('contact')
     else :
         messages.info(request,"Please Login First")
         return redirect ('login')

@@ -37,7 +37,13 @@
 </head>
 
 <body>
+    {% if messages %}
+    {% for message in messages %}
+    {% if message.tags %} <script>
+        alert("{{ message }}") </script> {% endif %}
 
+    {% endfor %}
+        {% endif %}
     <section class="page-title section pb-0">
         <div class="container">
             <div class="row">
@@ -84,11 +90,6 @@
                     </div>
 
                     <form id="contact-form" class="contact__form mt-5" method="post" action="/contact/">
-                        {% if messages %}
-                            {% for msg in messages %}
-                            <p style="font-size: 18px; color:rgb(42, 170, 42);">{{msg}}</p>
-                            {% endfor %}
-                        {% endif %}
                         {% csrf_token %}
                         <div class="form-row">
                             <div class="col-lg-6">
