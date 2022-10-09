@@ -38,19 +38,22 @@
                                     <div class="item_fulltext">
                                         <p>&nbsp;</p>
                                         <table style="width: 100%;">
-                                             
                                             <tbody>
                                                 <tr class="row justify-content-start">
-                                                    {% for img in images %}
-                                                    <th class="col-4">
-                                                        <p><img src="{{img.image.url}}" alt="b02" width="250"
+                                                    {% for member in images %}
+                                                    <th class="col-4 center">
+                                                        <p><img src="{{member.image.url}}" alt="b02" width="250"
                                                                 height="244" /></p>
-                                                        <h4>{{img.name}}</h4>
-                                                        <p>{{img.text}}</p>     
+                                                        <h4>{{member.name}}</h4>
+                                                        <p>นักศึกษาชั้นปีที่ :{{member.year}}</p>     
+                                                        <p>ความสามารถ : {{member.ability}}</p>
+                                                        <p>ประสบการณ์การทำงาน : {{member.workexperience}}</p>
+                                                        <!-- <a href="{{img.github}}"><i class="ti-github mr-3"></i></a> -->
                                                     </th>
                                                     {% endfor %}
                                                 </tr>
-                                            </tbody>
+                                            </tbody>  
+                                            
                                         </table>
                                        
                                         

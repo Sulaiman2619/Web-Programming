@@ -17,8 +17,12 @@ class Contactmessage(models.Model):
 
 class MemberImages(models.Model):
     image = models.ImageField(upload_to ='images/member')
-    name = models.CharField(max_length=200)
-    text = models.CharField(max_length=500)
+    name = models.CharField(max_length=200 ,blank=True)
+    year = models.CharField(max_length=200, blank = True)
+    ability = models.CharField(max_length = 200, blank=True )
+    workexperience = models.CharField(max_length = 200, blank=True )
+    github = models.URLField(max_length = 200,blank=True,db_index=True, unique=True)
+    community = models.URLField(max_length = 200,blank=True,db_index=True, unique=True)
     def __str__(self):
         return self.name
 
