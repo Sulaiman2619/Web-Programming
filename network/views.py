@@ -53,7 +53,7 @@ def login_view(request):
 
 def logout_view(request):
     logout(request)
-    return HttpResponseRedirect(reverse("DSocial"))
+    return HttpResponseRedirect(reverse("index"))
 
 
 def register(request):
@@ -177,7 +177,7 @@ def create_post(request):
         pic = request.FILES.get('picture')
         try:
             post = Post.objects.create(creater=request.user, content_text=text, content_image=pic)
-            return HttpResponseRedirect(reverse('index'))
+            return HttpResponseRedirect(reverse('DSocial'))
         except Exception as e:
             return HttpResponse(e)
     else:
