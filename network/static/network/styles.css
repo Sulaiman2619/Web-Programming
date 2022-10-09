@@ -45,6 +45,28 @@ svg{
     vertical-align: text-top;
 }
 
+   
+
+
+.btn-success {
+    background-color: #d71d83;
+}
+
+.btn-success:hover {
+    background-color: #d71d83;
+}
+
+.btn-success:disabled {
+    background-color: #d71d83;
+}
+
+.btn-success.dropdown-toggle {
+    background-color: #d71d83;
+}
+
+.btn-success:focus {
+    background-color: #d71d83;
+}
 
 .sidenav {
     height: 100%;
@@ -59,11 +81,36 @@ svg{
     padding-left: 3%;
     background-color: white;
 }
+
+.navbar-brand img {
+    width: 60%;
+    height: 30%;
+}
+
+@media only screen and (max-width: 600px) {
+    .sidenav {
+        width: 35%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .sidenav {
+        width: 35%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .sidenav {
+        width: 35%;
+    }
+}
+
 .sidenav ul{
     list-style: none;
     padding-left: 0px;
     margin-top: 3vh;
 }
+
 .sidenav li{
     margin-top: 7px;
 }
@@ -85,8 +132,8 @@ svg{
     transition-duration: .2s;
 }
 .new-post-btn{
-    padding-left: 55px !important;
-    padding-right: 55px !important;
+    padding-left: 30px !important;
+    padding-right: 30px !important;
     font-size: .95em;
     font-weight: 530;
     box-shadow: rgba(0, 0, 0, 0.08) 0px 8px 24px !important;
@@ -109,7 +156,6 @@ svg{
 }
 
 
-
 .main-div{
     position: relative;
     width: 47.25%;
@@ -118,6 +164,8 @@ svg{
     /*display: flex;
     flex-basis: auto;*/
 }
+
+
 .left-div{
     position: relative;
 }
@@ -136,6 +184,36 @@ svg{
     z-index: 1000;
 }
 
+@media only screen and (max-width: 600px) {
+    .main-div {
+        width: 65%s;
+        left: 35%;
+    }
+    .heading {
+        width: 65%;
+    }
+    
+}
+
+@media only screen and (max-width: 768px) {
+    .main-div {
+        width: 65%;
+        left: 35%;
+    }
+    .heading {
+        width: 65%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .main-div {
+        width: 65%;
+        left: 35%;
+    }
+    .heading {
+        width: 65%;
+    }
+}
 .left-div-content{
     margin-top: 7.5vh;
 }
@@ -576,6 +654,24 @@ svg{
     color: #6d7e8c;
 }
 
+
+@media only screen and (max-width: 600px) {
+    .right-div {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .right-div {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .right-div {
+        display: none;
+    }
+}
 
 .right-div-content{
     height: 92.5vh;

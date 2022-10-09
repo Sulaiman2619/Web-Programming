@@ -7,6 +7,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+
+
+    {% load static %}
+
+	<!-- ** Plugins Needed for the Project ** -->
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="{% static 'plugins/bootstrap/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'plugins/themify/css/themify-icons.css' %}">
+	<link rel="stylesheet" href="{% static 'plugins/counto/animate.css' %}">
+	<link rel="stylesheet" href="{% static 'plugins/aos/aos.css' %}">
+	<link rel="stylesheet" href="{% static 'plugins/owl-carousel/owl.carousel.min.css' %}">
+	<link rel="stylesheet" href="{% static 'plugins/owl-carousel/owl.theme.default.min.css' %}">
+	<link rel="stylesheet" href="{% static 'plugins/magnific-popup/magnific-popup.css' %}">
+	<link rel="stylesheet" href="{% static 'plugins/animated-text/animated-text.css' %}">
+
+	<!-- Main Stylesheet -->
+	<link href="{% static 'css/style.css' %}" rel="stylesheet">
     <title>Team Member</title>
 </head>
 
@@ -45,17 +63,17 @@
                                                         <p><img src="{{member.image.url}}" alt="b02" width="250"
                                                                 height="244" /></p>
                                                         <h4>{{member.name}}</h4>
-                                                        <p>นักศึกษาชั้นปีที่ :{{member.year}}</p>     
+                                                        <p>นักศึกษาชั้นปีที่ :{{member.year}}</p>
                                                         <p>ความสามารถ : {{member.ability}}</p>
                                                         <p>ประสบการณ์การทำงาน : {{member.workexperience}}</p>
                                                     </th>
                                                     {% endfor %}
                                                 </tr>
-                                            </tbody>  
-                                            
+                                            </tbody>
+
                                         </table>
-                                       
-                                        
+
+
                                     </div>
 
 
