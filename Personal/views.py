@@ -48,7 +48,9 @@ def Contact(request):
     return render(request,'contact.html')
 
 def Index(request):
-    return render(request,'index.html')
+    Index = IndexImage.objects.all()
+    index = {'index':Index}
+    return render(request,'index.html',index)
 
 
 def Register(request):
