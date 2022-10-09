@@ -1,0 +1,91 @@
+{% load static %}
+
+
+<!-- Bootstrap -->
+<link rel="stylesheet" href="{% static 'plugins/bootstrap/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'plugins/themify/css/themify-icons.css' %}">
+<link rel="stylesheet" href="{% static 'plugins/counto/animate.css' %}">
+<link rel="stylesheet" href="{% static 'plugins/aos/aos.css' %}">
+<link rel="stylesheet" href="{% static 'plugins/owl-carousel/owl.carousel.min.css' %}">
+<link rel="stylesheet" href="{% static 'plugins/owl-carousel/owl.theme.default.min.css' %}">
+<link rel="stylesheet" href="{% static 'plugins/magnific-popup/magnific-popup.css' %}">
+<link rel="stylesheet" href="{% static 'plugins/animated-text/animated-text.css' %}">
+
+<!-- Main Stylesheet -->
+<link href="{% static 'css/styless.css' %}" rel="stylesheet">
+
+<nav class="navbar navbar-expand-lg  main-nav " id="navbar">
+	<div class="container">
+	  <a class="navbar-brand" href="{% url 'index' %}">
+	  	<img src="{% static 'images/logo.png' %}" alt="" class="img-fluid" style="width: 140px; height: 50px;">
+	  </a>
+
+	  <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="ti-align-justify"></span>
+	  </button>
+  
+		  <div class="collapse navbar-collapse" id="navbarsExample09">
+			<ul class="navbar-nav ml-auto">
+			  <li class="nav-item  active"><a class="nav-link" href="{% url 'index' %}">Home</a></li>
+
+			  <li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</a>
+					<ul class="dropdown-menu" aria-labelledby="dropdown01">
+						<li><a class="dropdown-item" href="{% url 'about' %}">About Me</a></li>
+						<li><a class="dropdown-item" href="{% url 'member' %}">Member</a></li>
+					</ul>
+			  </li>
+
+			   <li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blog</a>
+					<ul class="dropdown-menu" aria-labelledby="dropdown05">
+						<li><a class="dropdown-item" href="{% url 'project' %}">Project</a></li>
+						<li><a class="dropdown-item" href="{% url 'DSocial' %}">Community</a></li>
+					</ul>
+			  </li>
+			   <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
+			   {% if user.is_authenticated %}
+			   <li class="nav-item login"><a class="nav-link" href="{% url 'logout' %}">Logout</a></li>
+			   {% else %}
+			   <li class="nav-item login"><a class="nav-link" href="{% url 'login' %}">Login</a></li>
+			   {% endif %}
+			</ul>
+		</div>
+	</div>
+</nav>
+
+
+
+
+<!-- jQuery -->
+<script src="{% static 'plugins/jQuery/jquery.min.js' %}"></script>
+<!-- Bootstrap JS -->
+<script src="{% static 'plugins/bootstrap/bootstrap.min.js' %}"></script>
+<script src="{% static 'plugins/aos/aos.js' %}"></script>
+<script src="{% static 'plugins/owl-carousel/owl.carousel.min.js' %}"></script>
+<script src="{% static 'plugins/shuffle/shuffle.min.js' %}"></script>
+<script src="{% static 'plugins/magnific-popup/jquery.magnific-popup.min.js' %}"></script>
+<script src="{% static 'plugins/animated-text/animated-text.js' %}"></script>
+<script src="{% static 'plugins/counto/apear.js' %}"></script>
+<script src="{% static 'plugins/counto/counTo.js' %}"></script>
+
+<!-- Google Map -->
+<script src="{% static 'plugins/google-map/map.js' %}"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkeLMlsiwzp6b3Gnaxd86lvakimwGA6UA&callback=initMap">
+</script>
+<!-- Main Script -->
+<script src="{% static 'js/script.js'  %}"></script>
+<script type="text/javascript">
+	(function(d, m){
+		var kommunicateSettings = 
+			{"appId":"359e929afa3d479d80a146d5561eb94b6","popupWidget":true,"automaticChatOpenOnNavigation":true};
+		var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+		s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+		var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
+		window.kommunicate = m; m._globals = kommunicateSettings;
+	})(document, window.kommunicate || {});
+</script>
+
+{% block content %}
+{% endblock %}
+

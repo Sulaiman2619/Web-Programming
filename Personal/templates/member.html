@@ -1,0 +1,110 @@
+{% extends 'layout.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Member</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row-container">
+            <div class="container-fluid">
+                <div id="system-message-container">
+                </div>
+
+            </div>
+        </div>
+        <!-- Main Content row -->
+        <div id="content-row">
+            <div class="row-container">
+                <div class="container-fluid">
+                    <div class="content-inner row-fluid">
+
+                        <div id="component" class="span12">
+                            <main role="main">
+
+
+                                <article class="page-item page-item__">
+                                    <header class="item_header">
+                                        <h4 class="item_title"><span
+                                                class="item_title_part0 item_title_part_odd item_title_part_first_half item_title_part_first item_title_part_last">ทำเนียบบุคลากรสาขาวิทยาการข้อมูลและการวิเคราะห์</span>
+                                        </h4>
+                                    </header>
+                                    <div class="item_fulltext">
+                                        <p>&nbsp;</p>
+                                        <table style="width: 100%;">
+                                             
+                                            <tbody>
+                                                <tr class="row justify-content-start">
+                                                    {% for img in images %}
+                                                    <th class="col-4">
+                                                        <p><img src="{{img.image.url}}" alt="b02" width="250"
+                                                                height="244" /></p>
+                                                        <h4>{{img.name}}</h4>
+                                                        <p>{{img.text}}</p>     
+                                                    </th>
+                                                    {% endfor %}
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                       
+                                        
+                                    </div>
+
+
+                                    <!-- Social Sharing -->
+                                    <div class="addthis_sharing_toolbox"></div>
+                                    <script type="text/javascript">
+                                        var addthis_config = {
+                                            pubid: "ra-4d89903e1583a34e"
+                                        }
+                                    </script>
+                                    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js">
+                                    </script>
+                                    <!-- Pagination -->
+                                </article>
+                            </main>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="push"></div>
+    </div>
+    <section class="footer">
+        <div class="container">
+            <div class="row ">
+                <div class="col-lg-6">
+                    <p class="mb-0 text-white">Designed & Developed by <a href="themefisher.com"
+                            class="text-white">Themefisher</a></p>
+                </div>
+                <div class="col-lg-6">
+                    <div class="widget footer-widget text-lg-right mt-5 mt-lg-0">
+                        <ul class="list-inline mb-0">
+                            <li class="list-inline-item"><a href="https://www.facebook.com/themefisher"
+                                    target="_blank"><i class="ti-facebook mr-3"></i></a>
+                            </li>
+                            <li class="list-inline-item"><a href="https://twitter.com/themefisher" target="_blank"><i
+                                        class="ti-twitter mr-3"></i></a>
+                            </li>
+                            <li class="list-inline-item"><a href="https://github.com/themefisher/" target="_blank"><i
+                                        class="ti-github mr-3"></i></a></li>
+                            <li class="list-inline-item"><a href="https://www.pinterest.com/themefisher/"
+                                    target="_blank"><i class="ti-pinterest mr-3"></i></a></li>
+                            <li class="list-inline-item"><a href="https://dribbble.com/themefisher/" target="_blank"><i
+                                        class="ti-dribbble mr-3"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
+{% endblock %}
