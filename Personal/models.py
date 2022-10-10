@@ -55,3 +55,5 @@ class Username(models.Model):
 class IndexImage (models.Model):
     image = models.ImageField(upload_to ='images/index')
     topic = models.CharField(max_length = 254)
+    def __str__(self):
+        return self.topic

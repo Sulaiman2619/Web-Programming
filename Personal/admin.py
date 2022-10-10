@@ -14,5 +14,5 @@ admin.site.register(Project1, ProjectAdmin)
 
 admin.site.register(Student)
 
-admin.site.register(IndexImage)
+admin.site.register(IndexImage,MemberImagesAdmin)
 

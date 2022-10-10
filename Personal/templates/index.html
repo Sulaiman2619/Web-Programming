@@ -94,10 +94,10 @@
 			
 			<div class="row shuffle-wrapper portfolio-gallery">
 				{% for index in index %}
-				<div class="col-lg-4 col-6 mb-4 shuffle-item" data-groups="[&quot;design&quot;,&quot;photo&quot;]">
+				<div class="col-lg-4 col-6 mb-4 shuffle-item"  data-groups="[&quot;design&quot;,&quot;photo&quot;]">
 					<div class="position-relative inner-box">
 						<div class="image position-relative ">
-							<img src="{{index.image.url}}" alt="portfolio-image" class="img-fluid w-100 d-block">
+							<img style="width: 300px; height : 230px;" src="{{index.image.url}}" alt="portfolio-image" class="img-fluid w-100 d-block">
 							<div class="overlay-box">
 								<div class="overlay-inner">
 									<a class="overlay-content" href="{{index.image.url}}">
